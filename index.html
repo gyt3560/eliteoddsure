@@ -1,196 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EliteOddsure - Get expert match predictions and pay via M-Pesa for guaranteed winning tips." />
-  <title>EliteOddsure | Match Predictions</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<body>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    section {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-
-    h1, h2 {
-      color: #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #fff;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 10px;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    form button {
-      background-color: #28a745;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
       color: white;
-      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .welcome {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+    }
+
+    .telegram-button {
+      background-color: #0088cc;
+      color: white;
+      padding: 12px 25px;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px;
+      font-size: 1em;
       cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
     }
 
-    form button:hover {
-      background-color: #218838;
+    .telegram-button:hover {
+      background-color: #005f8a;
     }
 
-    #form-response {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #28a745;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
+    .payment-info {
+      margin-top: 20px;
+      font-size: 1em;
     }
   </style>
-</head>
-<body>
 
-<header>
-  <h1>EliteOddsure - Match Predictions</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#how-it-works">How It Works</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<div class="container">
-
-  <section id="home">
-    <h2>Welcome to EliteOddsure</h2>
-    <p>Get accurate football match predictions and take your betting game to the next level. Trusted insights, expert data, and real results!</p>
-    <a class="btn" href="#contact">Sign Up</a>
-  </section>
-
-  <section id="how-it-works">
-    <h2>How It Works</h2>
-    <ul>
-      <li>We analyze thousands of match stats and trends daily.</li>
-      <li>You pay via M-Pesa to receive accurate predictions.</li>
-      <li>We deliver predictions via Telegram and email.</li>
-    </ul>
-    <p>Telegram bot integration is coming soon for instant tips!</p>
-  </section>
-
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <ul>
-      <li><strong>Single Prediction:</strong> $5 (Ksh 700)</li>
-      <li><strong>Weekly Package:</strong> $15 (Ksh 2,100)</li>
-      <li><strong>Monthly Access:</strong> $50 (Ksh 7,000)</li>
-    </ul>
-    <p>Pay via M-Pesa to: <strong>0724546408</strong> (Recipient: <strong>EliteOddsure</strong>)</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact / Sign Up</h2>
-    <form id="signup-form">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required aria-label="Your Name" />
-
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required aria-label="Your Email" />
-
-      <label for="message">Message or Notes:</label>
-      <textarea id="message" name="message" rows="4" placeholder="E.g. I paid via M-Pesa to EliteOddsure..." aria-label="Your message or notes"></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-    <p id="form-response"></p>
-  </section>
-
-</div>
-
-<footer>
-  <p>&copy; 2025 EliteOddsure. All rights reserved.</p>
-</footer>
-
-<script>
-  document.getElementById('signup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    const response = document.getElementById('form-response');
-    response.textContent = `Thank you ${name}! Your message has been received. Our team from EliteOddsure will contact you shortly.`;
-
-    this.reset();
-  });
-</script>
-
+  <div class="welcome">
+    <h1>Welcome to EliteOddsure 🎯</h1>
+    <p>Get top-notch match predictions that give you the edge. Reliable. Fast. Elite.</p>
+    <a class="telegram-button" href="https://t.me/EliteOddsureBot" target="_blank">Join on Telegram</a>
+    <div class="payment-info">
+      <p><strong>Payment Method:</strong> Securely via <span style="color: #ffdd57;">AmmerPay</span></p>
+    </div>
+  </div>
 </body>
-</html>
