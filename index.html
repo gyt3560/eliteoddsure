@@ -1,65 +1,133 @@
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteOddsure</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
       text-align: center;
+      padding: 0;
     }
 
-    .welcome {
+    .container {
+      padding: 40px 20px;
+    }
+
+    .welcome-box {
       background: rgba(255, 255, 255, 0.1);
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      max-width: 90%;
+      margin-top: 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 15px;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.2em;
-      margin-bottom: 25px;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
 
     .telegram-button {
-      background-color: #0088cc;
+      background: #0088cc;
       color: white;
-      padding: 12px 25px;
       border: none;
-      border-radius: 8px;
-      font-size: 1em;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background 0.3s ease;
       text-decoration: none;
     }
 
     .telegram-button:hover {
-      background-color: #005f8a;
+      background: #006eaa;
     }
 
-    .payment-info {
-      margin-top: 20px;
-      font-size: 1em;
+    .pricing {
+      margin-top: 60px;
+    }
+
+    .price-card {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 300px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .price-card h2 {
+      font-size: 22px;
+    }
+
+    .price-card p {
+      font-size: 16px;
+    }
+
+    .ammerpay {
+      margin-top: 40px;
+    }
+
+    .hidden-number {
+      display: none;
+      font-weight: bold;
+      color: yellow;
+    }
+
+    .show-number-btn {
+      background: limegreen;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .show-number-btn:hover {
+      background: green;
     }
   </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-box">
+      <h1>Welcome to EliteOddsure!</h1>
+      <p>Get daily premium football match predictions. Join our Telegram bot to subscribe now!</p>
+      <a href="https://t.me/Elitesureodds_bot" class="telegram-button">Join Our Telegram Bot</a>
+    </div>
 
-  <div class="welcome">
-    <h1>Welcome to EliteOddsure 🎯</h1>
-    <p>Get top-notch match predictions that give you the edge. Reliable. Fast. Elite.</p>
-    <a class="telegram-button" href="https://t.me/EliteOddsureBot" target="_blank">Join on Telegram</a>
-    <div class="payment-info">
-      <p><strong>Payment Method:</strong> Securely via <span style="color: #ffdd57;">AmmerPay</span></p>
+    <div class="pricing">
+      <h2>Pricing</h2>
+      <div class="price-card">
+        <h2>Daily Tips</h2>
+        <p>KES 100 - Access today’s best odds.</p>
+      </div>
+      <div class="price-card">
+        <h2>Weekly VIP</h2>
+        <p>KES 500 - Full access to daily VIP predictions.</p>
+      </div>
+    </div>
+
+    <div class="ammerpay">
+      <h2>Make Payment via AmmerPay</h2>
+      <button class="show-number-btn" onclick="showNumber()">I’ve Paid</button>
+      <p id="number" class="hidden-number">Pay to: <br><strong>0724546408</strong></p>
     </div>
   </div>
+
+  <script>
+    function showNumber() {
+      document.getElementById('number').style.display = 'block';
+    }
+  </script>
 </body>
+</html>
